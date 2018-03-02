@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		334A2355203D09A1005C96D3 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334A2354203D09A1005C96D3 /* DesignableButton.swift */; };
 		33D0380B203CF78E0064F95B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D0380A203CF78E0064F95B /* AppDelegate.swift */; };
 		33D0380D203CF78E0064F95B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D0380C203CF78E0064F95B /* ViewController.swift */; };
 		33D03810203CF78E0064F95B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D0380E203CF78E0064F95B /* Main.storyboard */; };
 		33D03812203CF78E0064F95B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33D03811203CF78E0064F95B /* Assets.xcassets */; };
 		33D03815203CF78E0064F95B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33D03813203CF78E0064F95B /* LaunchScreen.storyboard */; };
+		33D0381D203CFB3C0064F95B /* test.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 33D0381C203CFB3C0064F95B /* test.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		334A2354203D09A1005C96D3 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
 		33D03807203CF78E0064F95B /* SpeechRecognitionAPIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechRecognitionAPIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33D0380A203CF78E0064F95B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33D0380C203CF78E0064F95B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		33D03811203CF78E0064F95B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33D03814203CF78E0064F95B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33D03816203CF78E0064F95B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33D0381C203CFB3C0064F95B /* test.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,24 @@
 		33D03809203CF78E0064F95B /* SpeechRecognitionAPIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				33D0381E203CFB430064F95B /* Resources */,
 				33D0380A203CF78E0064F95B /* AppDelegate.swift */,
 				33D0380C203CF78E0064F95B /* ViewController.swift */,
 				33D0380E203CF78E0064F95B /* Main.storyboard */,
 				33D03811203CF78E0064F95B /* Assets.xcassets */,
 				33D03813203CF78E0064F95B /* LaunchScreen.storyboard */,
 				33D03816203CF78E0064F95B /* Info.plist */,
+				334A2354203D09A1005C96D3 /* DesignableButton.swift */,
 			);
 			path = SpeechRecognitionAPIDemo;
+			sourceTree = "<group>";
+		};
+		33D0381E203CFB430064F95B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				33D0381C203CFB3C0064F95B /* test.m4a */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +138,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33D0381D203CFB3C0064F95B /* test.m4a in Resources */,
 				33D03815203CF78E0064F95B /* LaunchScreen.storyboard in Resources */,
 				33D03812203CF78E0064F95B /* Assets.xcassets in Resources */,
 				33D03810203CF78E0064F95B /* Main.storyboard in Resources */,
@@ -139,6 +154,7 @@
 			files = (
 				33D0380D203CF78E0064F95B /* ViewController.swift in Sources */,
 				33D0380B203CF78E0064F95B /* AppDelegate.swift in Sources */,
+				334A2355203D09A1005C96D3 /* DesignableButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +318,7 @@
 				33D0381B203CF78E0064F95B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

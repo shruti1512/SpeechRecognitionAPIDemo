@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17C88" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpeechRecognitionAPIDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,88 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GT1-Ia-pBZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCRIBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loP-rK-lw4">
+                                        <rect key="frame" x="153" y="14" width="69" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.29925480199999999" blue="0.1925307044" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="loP-rK-lw4" firstAttribute="centerX" secondItem="GT1-Ia-pBZ" secondAttribute="centerX" id="9n8-CF-PEm"/>
+                                    <constraint firstItem="loP-rK-lw4" firstAttribute="centerY" secondItem="GT1-Ia-pBZ" secondAttribute="centerY" id="RHx-rb-pCI"/>
+                                    <constraint firstAttribute="height" constant="55" id="yVT-QK-1G5"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EvQ-7r-d1P">
+                                <rect key="frame" x="81" y="547" width="213.5" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qm-ma-LNQ" customClass="DesignableButton" customModule="SpeechRecognitionAPIDemo" customModuleProvider="target">
+                                        <rect key="frame" x="77" y="0.0" width="60" height="59.5"/>
+                                        <color key="backgroundColor" red="1" green="0.29925480199999999" blue="0.1925307044" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Vy4-kG-Kw5"/>
+                                            <constraint firstAttribute="width" constant="60" id="rVf-eW-3mD"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="playAudioBtnTapEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8nf-8a-A2Q"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY &amp; TRANSCRIBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsG-YM-L9a">
+                                        <rect key="frame" x="0.0" y="69.5" width="213.5" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="M3S-Ff-bZS"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="E7l-FX-lGB">
+                                <rect key="frame" x="16" y="73" width="343" height="445"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hgT-IY-qnE">
+                                <rect key="frame" x="169" y="558.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hgT-IY-qnE" firstAttribute="centerX" secondItem="8qm-ma-LNQ" secondAttribute="centerX" id="CwU-lY-nsH"/>
+                            <constraint firstItem="E7l-FX-lGB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ELO-2o-MjF"/>
+                            <constraint firstItem="E7l-FX-lGB" firstAttribute="top" secondItem="GT1-Ia-pBZ" secondAttribute="bottom" constant="18" id="F1w-cB-wzR"/>
+                            <constraint firstAttribute="trailing" secondItem="GT1-Ia-pBZ" secondAttribute="trailing" id="JDJ-qI-6dD"/>
+                            <constraint firstItem="EvQ-7r-d1P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S1Q-iG-lTx"/>
+                            <constraint firstItem="GT1-Ia-pBZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Si7-ef-Wi0"/>
+                            <constraint firstItem="hgT-IY-qnE" firstAttribute="centerY" secondItem="8qm-ma-LNQ" secondAttribute="centerY" id="TZ7-gV-FJ4"/>
+                            <constraint firstItem="EvQ-7r-d1P" firstAttribute="top" secondItem="E7l-FX-lGB" secondAttribute="bottom" constant="29" id="b1Q-gh-yoP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EvQ-7r-d1P" secondAttribute="bottom" constant="20" id="bnp-Ue-Yno"/>
+                            <constraint firstItem="GT1-Ia-pBZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="i4L-xA-IXT"/>
+                            <constraint firstItem="E7l-FX-lGB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ifp-e3-xFg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activitySpinner" destination="hgT-IY-qnE" id="nQ6-bS-JY9"/>
+                        <outlet property="speechTextView" destination="E7l-FX-lGB" id="Crw-TD-QRr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
